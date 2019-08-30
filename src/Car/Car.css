@@ -1,0 +1,37 @@
+
+.button-container { 
+    border: 0;  
+    float: right;
+    font-size: 12px;
+    height: var(--note-button-height);
+    position: relative;
+  
+}
+
+.car-delete-yes {
+    background-color: #041a3a;
+    color: #bdbcbc;
+}
+
+.car-delete-no {
+    background-color: #041a3a;
+    color: #bdbcbc;
+}
+
+.car-delete-no:hover {
+    background-color: #0b1d7e;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+.car-delete-yes:hover {
+    background-color: #bd0909;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .nav-link {
+    color: #bdbcbc;
+}

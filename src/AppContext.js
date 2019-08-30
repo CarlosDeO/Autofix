@@ -6,7 +6,8 @@ const AppContext = React.createContext({
     cars: [],
     fixes: [],
     selectedCar: '',
-    selectedFix: ''
+    selectedFix: '',
+    setCars: () => {}
 })
 
 export default AppContext;

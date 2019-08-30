@@ -1,5 +1,5 @@
 .signin-register {
-    background: rgba(44, 62, 80, 0.7);
+    background: rgba(44, 62, 80, .92); /* .7 */
     padding: 40px;
     width: auto;
     margin: auto;
@@ -39,21 +39,6 @@
     color: #fff;
     border-radius: 5px;
 }
-
-/* .trippform {
-    text-align: center;
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid #fff;
-    font-family: 'Play', sans-serif;
-    font-size: 16px;
-    font-weight: 200px;
-    padding: 10px 0;
-    transition: border 0.5s;
-    outline: none;
-    color: #fff;
-    border-radius: 5px;
-} */
 
 .login-button[type=submit] {
     border: none;

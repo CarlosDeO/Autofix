@@ -1,0 +1,117 @@
+/* .nav-link {
+    border: 1px solid red;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    display: block;
+    background-color: bisque;
+  } */
+/* .nav-link {
+    color: #bdbcbc;
+} */
+
+.car-wrapper {
+    width: 400px;
+    margin: 10px auto;
+    padding: 0 0px 20px 0px;
+    padding-bottom: 40px;
+    /* border: 1px solid black; */
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    background: rgba(44, 62, 80, .92);
+
+}
+
+.car-title {
+    text-align: center;
+    font-size: 50px;
+    border-top: 3px solid #1F9A8C;
+    border-radius: 5px;
+    padding-top: 20px;
+}
+
+.car-list {
+    width: 300px;
+    margin: 0 auto;
+    /* border: 1px solid #000; */
+}
+
+.car-item {
+    width: 282px;
+    margin: 20px 0;
+    padding: 10px;
+    margin-left: -20px;
+    list-style-type: none;
+    border: 1px solid rgba(0, 0, 0, .4);
+    border-radius: 2px;
+    background-color: rgba(0, 0, 0, .1);
+    box-shadow: 0 2px 3px 0 rbga(0, 0, 0, .6);
+    font-size: 20px;
+}
+
+.car-item:hover {
+    background: rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .2);
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* 
+.add-car {
+    border: none;
+    width: 190px;
+    background: white;
+    color: #000;
+    font-size: 16px;
+    line-height: 25px;
+    padding: 10px 0;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.add-car:hover {
+    color: #fff;
+    background-color: black;
+} */
+
+.add-car {
+    margin-top: 15px;
+    height: 50px;
+    width: 304px;
+    padding: 10px;
+    /* background-color: #1F9A8C; */
+    background: #1F9A8C;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    
+    color: white;
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    transition: all .3s ease-out;
+  }
+  
+  .add-car:hover {
+    background: #25BAAA;
+    cursor: pointer;
+  }
+
+  .car-delete {
+    /* --note-button-height: 32px; */
+    background-color: #041a3a;
+    border: 0;
+    color: #bdbcbc;
+    float: right;
+    font-size: 12px;
+    /* height: var(--note-button-height); */
+    position: relative;
+    /* top: calc((var(--note-button-height) + 32px) * -1);
+    transform-origin: right bottom;
+    transform: rotate(-90deg);
+    width: calc(var(--note-height)); */
+  }
+  .car-delete:hover {
+    background-color: #bd0909;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+  }

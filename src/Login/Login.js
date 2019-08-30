@@ -17,6 +17,7 @@ class Login extends React.Component {
     }
     onLogin(value) {
         this.context.setUserName(value);
+        
     }
     toggleHidden() {
         this.setState({ login: !this.state.login })
@@ -40,6 +41,7 @@ class Login extends React.Component {
             })
         })
             .then(response => response.json())
+            // automate login after registing User
     }
     loginUser(event) {
         console.log('clicked');
@@ -61,6 +63,7 @@ class Login extends React.Component {
                 localStorage.authToken = data.authToken
                 window.location = '/profile'
             })
+            // this.context.getCars();
     }
     render() {
         if (this.state.login) {
