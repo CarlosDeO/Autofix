@@ -81,6 +81,7 @@ AutoFix is a web application that is intended for mechanics to keep a log of all
 
 
 <h2>API Documentation</h2>
+<p>Repo for back end <a href="https://github.com/CarlosDeO/AutoFix-Backend">AutoFix-backend</a></p>
 <p>API endpoints for the back end include:</p>
 <ul>Users
 	<li>POST to '/api/auth' to create a new users</li>
