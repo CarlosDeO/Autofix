@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react';  
+import config from '../config';
 import RegisteredList from '../RegisteredList/RegisteredList'
-import FixList from '../FixList/FixList'
-import { Route, Link } from 'react-router-dom'
-import App from '../App';
+import Header from '../Header/Header';
 import AppContext from '../AppContext';
+
 
 
 
@@ -11,22 +11,9 @@ class Profile extends React.Component {
     static contextType = AppContext;
     componentDidMount() {
         this.getCars();
-        // fetch('http://localhost:8080/api/cars', {
-        //     method: "Get",
-        //     headers: {
-        //         "Content-Type": "application/json",
-        //         authorization: "bearer " + localStorage.authToken
-        //     }
-        // })
-        //     .then(response => response.json())
-        //     .then(data => {
-        //         console.log(data)
-        //         this.context.setCars(data)
-        //     })
-      
     }
     getCars = () => {
-        fetch('http://localhost:8080/api/cars', {
+        fetch(config.API_ENDPOINT +'/api/cars', {
             method: "Get",
             headers: {
                 "Content-Type": "application/json",
@@ -41,13 +28,17 @@ class Profile extends React.Component {
     }
 
     render() {
-        // const username = this.props.username;
+      
         return (
-            <div>
-                {/* <h3>{username}</h3> */}
+            
+         
+            <div className="profile-container">
+               
+                <Header {...this.props} />
                 <RegisteredList getCars={this.getCars} />
-                {/* <FixList /> */}
+              
             </div>
+          
         )
     }
 }

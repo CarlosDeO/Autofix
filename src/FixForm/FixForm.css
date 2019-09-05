@@ -1,23 +1,24 @@
-.car-form-container {
+.fix-form-container {
     display: flex;
     padding: 40px;
     width: auto;
-    margin: auto;
+    /* margin: auto; */
     height: auto;
     /* width: 350px;
     max-width: 1200px; */
+    margin-bottom: 50px;
     margin-top: 200px;
     /* margin: 0 auto;  */
     background: rgba(44, 62, 80, .92);
     border: 1px solid #1F9A8C;
 }
 
-.car-form {
+.fix-form {
     width: 240px;
     text-align: center;
 }
 
-.car-form input {
+.fix-form input {
     width: 240px;
     text-align: center;
     background: transparent;
@@ -76,15 +77,6 @@
     flex: 1 0 220px;
   }
   
-  /* .flex-outer li p {
-    margin: 0;
-  } */
-  
-  /* .flex-outer li input:not([type='checkbox']),
-  .flex-outer li textarea {
-    padding: 15px;
-    border: none;
-  } */
   
   .flex-outer li button {
     margin-left: auto;
@@ -97,7 +89,7 @@
     border-radius: 2px;
   }
 
-  .car-submit[type=submit] {
+  .fix-submit[type=submit] {
     border: none;
     width: 190px;
     background: white;
@@ -109,11 +101,22 @@
     cursor: pointer;
 }
 
-.car-submit[type=submit]:hover {
+.fix-submit[type=submit]:hover {
     color: #fff;
     background-color: black;
 }
   
-  /* .flex-inner li {
-    width: 100px;
-  } */
+.text-label{
+    color: white;
+    margin-left: 10px;  
+    padding: 8px;
+    font-weight: 300;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+}
+
+textarea {
+    width: 250px;
+    height: 150px;
+    margin: 10px 0px;
+}

@@ -1,12 +1,11 @@
 import React from 'react';
-import { Route, Link } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import AppContext from './AppContext';
 import HomePage from './HomePage/HomePage';
 import Login from './Login/Login';
 import Profile from './Profile/Profile';
 import CarForm from './CarForm/CarForm';
 import FixForm from './FixForm/FixForm';
-import STORE from './STORE';
 import FixList from './FixList/FixList';
 
 
@@ -24,7 +23,7 @@ class App extends React.Component {
     }
   }
   setCars = (value) => {
-   this.setState({ cars: value})
+    this.setState({ cars: value })
   }
   setUserName = (value) => {
     this.setState({ username: value })
@@ -47,19 +46,20 @@ class App extends React.Component {
             component={Login} />
           <Route exact
             path='/profile'
-            render={() => (
-              <Profile 
-               selectedCar={this.state.selectedCar}/>
+            render={(props) => (
+              <Profile
+                {...props}
+                selectedCar={this.state.selectedCar} />
             )}
-             />
-          <Route 
+          />
+          <Route
             path='/form'
             component={CarForm}
           />
-          <Route 
+          <Route
             path='/cars/:carsId'
-            component={FixList}/>
-          <Route 
+            component={FixList} />
+          <Route
             path='/fix-form/:carsId'
             component={FixForm}
           />
@@ -70,3 +70,6 @@ class App extends React.Component {
 }
 
 export default App;
+
+// history.push on every path 
+// add config file to every localhost 

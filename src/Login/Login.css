@@ -8,6 +8,7 @@
     height: auto;
     margin-left: 180x;
     border-radius: 5px;
+    border: 1px solid #1F9A8C;
 }
 
 .signin-form,
@@ -16,10 +17,14 @@
     text-align: center;
 }
 
-/* .register-form {
-    display: none;
-} */
+.login-header {
+    margin-bottom: 15px;
+}
 
+.register-header {
+    margin-bottom: 15px;
+}
+ 
 .hidden {
     display: none;
 }
@@ -69,7 +74,7 @@
     cursor: pointer;
 }
 
-.register-button:hover {
+.register-button:hover, .cancel:hover {
     color: #fff;
     background-color: black;
 }
@@ -86,3 +91,4 @@
     border-radius: 15px;
     cursor: pointer;
 }
+

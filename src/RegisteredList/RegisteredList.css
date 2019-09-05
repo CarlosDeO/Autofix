@@ -1,18 +1,6 @@
-/* .nav-link {
-    border: 1px solid red;
-    border-radius: 5px;
-    padding: 5px;
-    margin: 5px;
-    display: block;
-    background-color: bisque;
-  } */
-/* .nav-link {
-    color: #bdbcbc;
-} */
-
 .car-wrapper {
     width: 400px;
-    margin: 10px auto;
+    margin: 200px auto;
     padding: 0 0px 20px 0px;
     padding-bottom: 40px;
     /* border: 1px solid black; */
@@ -49,6 +37,7 @@
     font-size: 20px;
 }
 
+
 .car-item:hover {
     background: rgba(0, 0, 0, 0.1);
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .2);
@@ -74,6 +63,7 @@
 } */
 
 .add-car {
+    margin-right: 30px;
     margin-top: 15px;
     height: 50px;
     width: 304px;
@@ -114,4 +104,11 @@
     color: white;
     cursor: pointer;
     font-weight: bold;
+  }
+
+  @media (min-width: 350px) {
+    .car-wrapper {
+      margin-left: 25px;
+      margin-right: 25px;
+    }
   }

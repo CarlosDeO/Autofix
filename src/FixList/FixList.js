@@ -1,17 +1,20 @@
 import React from 'react';
-import moment from 'moment';
-import { NavLink, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+import Fix from '../Fix/Fix';
+import './FixList.css';
+import config from '../config';
+import Header from '../Header/Header';
 
 class FixList extends React.Component {
     constructor(props) {
-        super(props); 
+        super(props);
         this.state = {
             fix: []
         }
     }
     componentDidMount() {
         console.log("fetch")
-        fetch('http://localhost:8080/api/fixs/' + this.props.match.params.carsId, {
+        fetch(config.API_ENDPOINT + '/api/fixs/' + this.props.match.params.carsId, {
             method: "Get",
             headers: {
                 "Content-Type": "application/json",
@@ -19,12 +22,12 @@ class FixList extends React.Component {
             }
         })
             .then(response => response.json())
-            .then(data => this.setState({fix: data}))     
+            .then(data => this.setState({ fix: data }))
     }
 
     handleDeleteFix(id) {
         console.log("delete")
-        fetch(`http://localhost:8080/api/fixs/${id}`, {
+        fetch(config.API_ENDPOINT + `/api/fixs/${id}`, {
             method: "delete",
             headers: {
                 "Content-Type": "application/json",
@@ -35,25 +38,24 @@ class FixList extends React.Component {
     }
 
     render() {
-        const fixList = this.state.fix.map(item => {
-        const date = moment(item.date).format('DD/MM/YYYY')
+        const fixs = this.state.fix.map(item => {
+
             return (
-                <li>
-                    <h2>{item.title}</h2>
-                    <p>{date}</p>
-                    <p>{item.cost}</p>
-                    <p>{item.description}</p>
-                    <button onClick={() => this.handleDeleteFix(item._id)}>delete</button>
-                </li>
+                <Fix item={item} handleDeleteFix={id => this.handleDeleteFix(id)} />
             )
         });
-        
-        return(
-            <div>
-            <h1>Fix List</h1>
-            {fixList}
-            <Link to={'/fix-form/' + this.props.match.params.carsId} className="addCar">Add Fix</Link>
-            </div>
+
+        return (
+            <>
+                <Header {...this.props} />
+                <div className="fix-wrapper">
+                    <h1 className="fix-title">Fix List</h1>
+                    <ul className="fix-list">
+                        {fixs}
+                    </ul>
+                    <Link className="add-fix" to={'/fix-form/' + this.props.match.params.carsId}>Add Fix</Link>
+                </div>
+            </>
         )
     }
 }

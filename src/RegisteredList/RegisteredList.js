@@ -1,8 +1,9 @@
 import React from 'react';
-import { NavLink, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import AppContext from '../AppContext';
 import './RegisteredList.css'
 import Car from '../Car/Car'
+import config from '../config';
 
 class RegisteredList extends React.Component {
     static contextType = AppContext;
@@ -14,7 +15,7 @@ class RegisteredList extends React.Component {
     }
     handleDelete(id) {
 
-        fetch(`http://localhost:8080/api/cars/${id}`, {
+        fetch(config.API_ENDPOINT + `/api/cars/${id}`, {
             method: "delete",
             headers: {
                 "Content-Type": "application/json",
@@ -25,25 +26,25 @@ class RegisteredList extends React.Component {
     }
 
     render() {
-        
+
         const cars = this.context.cars.map(car => {
             return (
-                <Car car={car} /> 
+                <Car handleDelete={(id) => this.handleDelete(id)} car={car} />
             )
         });
 
         return (
             <div className="car-wrapper">
 
-                {/* <div className="folderList"> */}
+
                 <h1 className="car-title">Cars</h1>
                 <ul className="car-list">
                     {cars}
-
                     <Link to='/form' className="add-car">Add Car</Link>
                 </ul>
-                {/* <Link to='/form' className="addCar">Add Car</Link> */}
-                {/* </div> */}
+
+
+
             </div>
         );
     }

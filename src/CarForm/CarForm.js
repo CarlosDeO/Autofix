@@ -1,25 +1,8 @@
 import React from 'react';
+import Header from '../Header/Header';
 import "./CarForm.css"
 
 class CarForm extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-    // handleData(data) {
-    //     fetch('http://api.carmd.com/v3.0/year', {
-    //         method: 'GET',
-    //         headers: {
-
-    //             "content-type": "application/json",
-    //             "authorization": "Basic M2JhZGU3ODYtOTUwYi00YzA3LWI2NGYtNjIzZWUzMTcyMDFj",
-    //             "partner-token": "704b94e43de74b549366d3c2a58645be"
-
-    //         }
-    //     })
-    //         .then(response => response.json())
-    //         .then(response => console.log(response))
-
-    // }
     onSubmit(event) {
         event.preventDefault();
         const { year, make, model } = event.target;
@@ -39,32 +22,37 @@ class CarForm extends React.Component {
             })
         })
             .then(response => response.json())
-            .then(response =>
-                console.log(response),
-                window.location = '/profile')
+            .then(response => {
+                console.log(response);
+                this.props.history.push('/profile');
+            })
     }
     render() {
 
         return (
-            <div className="form-container">
+         <>
+          <Header {...this.props}/>
+            <div className="car-form-container">
+                
                 <form className="car-form" onSubmit={e => this.onSubmit(e)}>
                     <ul class="flex-outer">
                     <li>
                     <label for="year">Year</label>
-                    <input type="number" for="year" name="year" required/>
+                    <input type="number" id="year" name="year" required/>
                     </li>
                     <li>
                     <label for="make">Make</label>
-                    <input type="text" for="make" name="make" required/>
+                    <input type="text" id="make" name="make" required/>
                     </li>
                     <li>
                     <label for="model">Model</label>
-                    <input for="model" type="text" name="model" required/>
+                    <input id="model" type="text" name="model" required/>
                     </li>
                     <button className="car-submit" type="submit">Submit</button>
                     </ul>
                 </form>
             </div>
+            </>
         )
     }
 }

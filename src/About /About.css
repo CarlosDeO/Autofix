@@ -1,78 +1,56 @@
-/* $border-color: lightgray;
-$accent-color: #4ddcb1;
-$purple: #748CCD;
-$darkpurple: #4062BB;
-$mediumpurple: #5F88E8; */
-
 .about-page {
-  height: 100vh;
-  min-height: 700px; 
-  background-color: rgb(117, 114, 114); 
-  display: flex; 
+  min-height: 100vh;
+  /* min-height: 700px; */
+  background-color: rgb(44, 62, 80);
+  display: flex;
   flex-direction: column;
-  justify-content: center; 
-  align-items: center; 
-  /* h2, p {
-  	color: white;
-  	margin: 0; 
-  	font-weight: 300; 
-  }
-  p {
-  	line-height: 24px; 
-  }
-  h2 {
-  	font-size: 52px;  
-  }
-  h3 {
-  	font-size: 18px;
-  	margin: 0; 
-  } */
+  justify-content: center;
+  align-items: center;
 }
 
-h2, p {
-  color: white;
-  margin: 0; 
-  font-weight: 300; 
-}
+h2,
 p {
-  line-height: 24px; 
+  color: white;
+  margin: 0;
+  font-weight: 300;
 }
+
+p {
+  line-height: 24px;
+}
+
 h2 {
-  font-size: 52px;  
+  font-size: 52px;
 }
+
 h3 {
   font-size: 18px;
-  margin: 0; 
+  margin: 0;
 }
 
 
 .about-header-container {
-	text-align: center;
+  text-align: center;
 }
 
 .about-cards-container {
-	width: 90%; 
-	display: flex; 
-	justify-content: space-around; 
-}
-
-.about-icon {
-	width: 70px;
-	margin: 30px;   
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
 }
 
 .about-card {
-	background-color: darkgrey;
-	box-shadow: 0 3px 5px rgba(0,0,0,0.2);
-	color: white; 
-	width: 30%; 
-	height: 350px; 
-	text-align: center;
-	padding: 10px; 
+  background-color: #717982;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  color: white;
+  width: 30%;
+  height: 350px;
+  text-align: center;
+  padding: 10px;
 }
 
 .cards-line {
-	margin: 1em 0; 
+  margin: 1em 0;
 }
 
 .short-line {
@@ -80,19 +58,42 @@ h3 {
   border-width: 0;
   height: 2px;
   margin: 2em 0;
-  width: 50px; 
+  width: 50px;
   background-color: white;
 }
 
-.enter-app-link {
-  color: white;
+.signin-button {
+  border: none;
+  width: 150px;
+  margin-top: 20px;
+  background: white;
+  color: #000;
   font-size: 16px;
-  text-decoration: underline;
-  padding-top: 50px;
+  line-height: 25px;
+  padding: 10px 0;
+  border-radius: 15px;
   cursor: pointer;
 }
 
-.enter-app-link:hover {
-  color: white;
-    text-decoration: none; 
+.signin-button:hover {
+  color: #fff;
+  background-color:#1F9A8C;
+} 
+
+
+
+@media (max-width: 500px) {
+  .about-card {
+    margin-bottom: 10px;
+    width: 100%;
+    flex: 1;
+  }
+
+  .about-cards-container {
+    flex-direction: column;
+  }
+
+  .about-page {
+    min-height: 100vh;
+  }
 }

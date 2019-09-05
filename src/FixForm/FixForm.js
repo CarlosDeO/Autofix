@@ -1,4 +1,7 @@
 import React from 'react';
+import './FixForm.css'
+import Header from '../Header/Header';
+import config from '../config';
 
 class FixForm extends React.Component {
     handleSubmit(event) {
@@ -7,7 +10,7 @@ class FixForm extends React.Component {
         const description = event.target.description.value;
         const cost = event.target.cost.value;
         event.preventDefault();
-        fetch('http://localhost:8080/api/fixs', {
+        fetch(config.API_ENDPOINT + '/api/fixs', {
             method: "post",
             headers: {
                 "Content-Type": "application/json",
@@ -21,21 +24,33 @@ class FixForm extends React.Component {
                 car: this.props.match.params.carsId
             })
         })
-            .then(response => response.json())
-            .then(response => window.location = '/cars/' + this.props.match.params.carsId)
+            .then(() => this.props.history.push('/cars/' + this.props.match.params.carsId))
     }
     render() {
         return (
             <>
-            {/* <button>View up coming repairs</button>
-            <button>Register a fix</button> */}
-            <form onSubmit={e => this.handleSubmit(e)}>
-                <input type="text" name="title"></input>
-                <input type="date" name="date"></input>
-                <input type="text" name="cost"></input>
-                <textarea name="description" ></textarea>
-                <button type="submit">Submit</button>
-            </form>
+                <Header {...this.props} />
+                <div className="fix-form-container">
+                    <form className="fix-form" onSubmit={e => this.handleSubmit(e)}>
+                        <ul class="flex-outer">
+                            <li>
+                            <label for="title">Fix Title</label>
+                            <input id="title" type="text" name="title"></input>
+                            </li>
+                            <li>
+                            <label for="date">Date</label>
+                            <input id="date" type="date" name="date"></input>
+                            </li>
+                            <li>
+                            <label for="cost">Cost</label>
+                            <input id="cost" type="text" name="cost"></input>
+                            </li>
+                            <label className="text-label" for="discription">Discription</label>
+                            <textarea id="discription" name="description" ></textarea>
+                            <button className="fix-submit" type="submit">Submit</button>
+                        </ul>
+                    </form>
+                </div>
             </>
         )
     }

@@ -20,8 +20,8 @@ class AboutCards extends React.Component {
                          id condimentum lorem bibendum vitae. Duis at neque purus. Donec lacinia massa quis torto.</p>
                 </div>
                 <div className="about-card">
-                    {/* <img className="about-icon" role="presentation" src="assets/images/local.png" /> */}
-                    <h3>Lorem ipsum dolor</h3>
+                    
+                    <h3>Try demo today</h3>
                     <hr className="short-line cards-line" />
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper aliquet ex,
                          id condimentum lorem bibendum vitae. Duis at neque purus. Donec lacinia massa quis torto. </p>
