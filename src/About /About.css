@@ -15,7 +15,8 @@ p {
   font-weight: 300;
 }
 
-p {
+.card-paragraph {
+  font-weight: 500;
   line-height: 24px;
 }
 
@@ -23,9 +24,11 @@ h2 {
   font-size: 52px;
 }
 
-h3 {
-  font-size: 18px;
+.card-title {
+  font-size: 25px;
   margin: 0;
+  text-decoration-line: underline;
+  color: black;
 }
 
 
@@ -77,9 +80,19 @@ h3 {
 
 .signin-button:hover {
   color: #fff;
-  background-color:#1F9A8C;
-} 
+  background-color: #1F9A8C;
+}
 
+.demo-link {
+  font-size: 25px;
+  cursor: pointer;
+  color: #94161c;
+  font-weight: bolder;
+}
+
+.demo-link:hover {
+  font-size: 150%;
+}
 
 
 @media (max-width: 500px) {

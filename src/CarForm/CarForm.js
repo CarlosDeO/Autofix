@@ -1,13 +1,14 @@
 import React from 'react';
 import Header from '../Header/Header';
 import "./CarForm.css"
+import config from '../config';
 
 class CarForm extends React.Component {
     onSubmit(event) {
         event.preventDefault();
         const { year, make, model } = event.target;
         // console.log(year.value, make.value, model.value)
-        fetch('http://localhost:8080/api/cars', {
+        fetch(config.API_ENDPOINT +'/api/cars', {
             method: "post",
             headers: {
                 "Content-Type": "application/json",
@@ -58,3 +59,6 @@ class CarForm extends React.Component {
 }
 
 export default CarForm;
+
+
+// add config

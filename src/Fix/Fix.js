@@ -3,7 +3,7 @@ import moment from 'moment';
 
 export default class Fix extends React.Component {
     render() {
-        const date = moment(this.props.item.date).format('DD/MM/YYYY')
+        const date = moment(this.props.item.date).format('MM/DD/YYYY')
         return (
             
             <li className="fix-item">

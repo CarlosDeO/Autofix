@@ -28,4 +28,3 @@ logout() {
     }
 }
 
-// change 'window.location' to this.props.history.push 

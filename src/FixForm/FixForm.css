@@ -2,13 +2,9 @@
     display: flex;
     padding: 40px;
     width: auto;
-    /* margin: auto; */
     height: auto;
-    /* width: 350px;
-    max-width: 1200px; */
     margin-bottom: 50px;
     margin-top: 200px;
-    /* margin: 0 auto;  */
     background: rgba(44, 62, 80, .92);
     border: 1px solid #1F9A8C;
 }
