@@ -39,7 +39,7 @@ class AboutCards extends React.Component {
                     <hr className="short-line cards-line" />
                     <p className="card-paragraph">
                         AutoFix will register as many cars as a user likes and keep a log of their repairs. The repair log consist of the title of the repair, when the repair was
-                        done, the cost of the repair and a small discretion on what was done.
+                        done, the cost of the repair and a small description on what was done.
                     </p>
                 </div>
                 <div className="about-card">
