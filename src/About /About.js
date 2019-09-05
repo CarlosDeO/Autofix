@@ -10,7 +10,7 @@ class About extends React.Component {
         return (
             <div className="about-page">
                 <AboutHeader />
-                <AboutCards />
+                <AboutCards {...this.props}  />
                 <Link className="signin-button" to="/login">Sign In</Link>
             </div>
         )
