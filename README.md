@@ -1,68 +1,105 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# AutoFix
 
-## Available Scripts
+<h2>DESCRIPTION</h2> 
+AutoFix is a web application that is intended for mechanics to keep a log of all of their client's cars. Aswell the auto repairs that belong to each car. AutoFix is also useful for those car enthusiasts who love to keep track of the maintenance of their car.
 
-In the project directory, you can run:
+<h2>FUNCTIONALITY</h2>
+<p>This app's functionality includes:</p>
+<ul>
+	<li>Access to demo accounts to try the app out before signing up</li>
+	<li>Register as a user</li>
+	<li>Login as an exciting user</li>
+	<li>Ability to register car</li>
+  <li>Ability to adding auto repairs that belong to each car</li>
+	<li>Ability to delete cars and fixs</li>
+</ul>
 
-### `npm start`
+<H2>APPLICATION WEBSITE</h2>
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+ <p>May preview a working prototype at <a href="https://auto-fix.herokuapp.com">AutoFix</a></p>
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+### Landing Page
+![Landing Page](public/Images/Landing-Page.png)
 
-### `npm test`
+### About Page
+![About Page](public/Images/About-Page.png)
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### User Login
+![User Login](public/Images/Loggin-Page.png)
 
-### `npm run build`
+### User Registration Page
+![User Registration Page](public/Images/Registration-Page.png)
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### User's Profile Page
+![User's Profile](public/Images/Profile-Page.png)
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+### Car Form
+![Car Form](public/Images/Car-Form.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Repair Page
+![Fix List](public/Images/FixList-Page.png)
 
-### `npm run eject`
+### Repair Form
+![Repair Form](public/Images/Fix-Form.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<h2>Password Requirements</h2>
+<ul>
+	<li>Minimum 6 characters</li>
+	<li>Maximum 72 characters</li>
+</ul>
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<h2>SECURITY</h2>
+<ul>
+	<li>Application uses JWT authentication </li>
+	<li>Passwords are encrypted using bcrypt.js</li>
+</ul>
 
-## Learn More
+<h2>TECHNOLOGY</h2>
+<h3>Front End</h3>
+<ul>
+	<li>HTML</li>
+	<li>CSS</li>
+	<li>JavaScript</li>
+	<li>AJAX JSON calls to the app's API</li>
+  <li>React</li>
+  <li>Context Library</li>
+</ul>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<h3>Back End</h3>
+<ul>
+	<li>Node.js</li>
+	<li>Express</li>
+	<li>Mocha</li>
+	<li>Chai</li>
+	<li>MongoDB</li>
+	<li>Mongoose</li>
+	<li>bcryptjs</li>
+	<li>Passport</li>
+</ul>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+<h2>API Documentation</h2>
+<p>API endpoints for the back end include:</p>
+<ul>Users
+	<li>POST to '/api/auth' to create a new users</li>
+	<li>POST to '/api/users' sign in exciting user</li>
+</ul>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+<ul>Cars
+	<li>GET to '/api/cars' to view all existing cars that are registered</li>
+	<li>GET to '/api/cars/:id' to view a single car by ID</li>
+	<li>POST to '/api/cars' to register new car entry</li>
+	<li>PUT to '/api/cars/:id' to edit an exciting car entry by ID</li>
+  <li>DELETE to '/api/cars/:id' to delete a single car by ID</li>
+</ul>
 
-### Analyzing the Bundle Size
+<ul>Fixs
+	<li>GET to '/api/fixs/:carid' to view all fixes existing to a single car </li>
+	<li>POST to '/api/fix' to add new fix entry</li>
+	<li>PUT to '/api/fixs/:id' to edit an exciting fix entry by ID</li>
+  <li>DELETE to '/api/fixs/:id' to delete a single fix by ID</li>
+</ul>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
