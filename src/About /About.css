@@ -33,6 +33,7 @@ h2 {
 
 
 .about-header-container {
+  margin-top: 35px;
   text-align: center;
 }
 
@@ -43,13 +44,14 @@ h2 {
 }
 
 .about-card {
-  background-color: #717982;
+  background-color: #9d8b7c;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
   color: white;
   width: 30%;
   height: 350px;
   text-align: center;
   padding: 10px;
+  border-radius: 5px;
 }
 
 .cards-line {
@@ -108,5 +110,12 @@ h2 {
 
   .about-page {
     min-height: 100vh;
+  }
+}
+
+@media screen and (min-width: 350px) {
+  .signin-button  {
+    margin-top: 10px;
+    margin-bottom: 25px;
   }
 }

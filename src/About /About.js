@@ -1,6 +1,5 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import config from '../config'; 
 import AboutHeader from './AboutHeader';
 import AboutCards from './AboutCards';
 import './About.css'
