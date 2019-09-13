@@ -1,7 +1,7 @@
 # AutoFix
 
 <h2>DESCRIPTION</h2> 
-AutoFix is a web application that is intended for mechanics to keep a log of all of their client's cars. Aswell the auto repairs that belong to each car. AutoFix is also useful for those car enthusiasts who love to keep track of the maintenance of their car.
+AutoFix is a web application that is intended for mechanics to keep a log of all of their client's cars. As well as the auto repairs that belong to each car. AutoFix is also useful for those car enthusiasts who love to keep track of the maintenance of their car.
 
 <h2>FUNCTIONALITY</h2>
 <p>This app's functionality includes:</p>
