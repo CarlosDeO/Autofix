@@ -30,7 +30,7 @@ class AboutCards extends React.Component {
                     <hr className="short-line cards-line" />
                     <p className="card-paragraph">
                         AutoFix is a web application that is intended for mechanics to keep a log of all of their client's
-                        cars. Aswell the auto repairs that belong to each car. AutoFix is also useful for those car enthusiasts who love to keep track of the maintenance of their car.
+                        cars. As well as the auto repairs that belong to each car. AutoFix is also useful for those car enthusiasts who love to keep track of the maintenance of their car.
                     </p>
                 </div>
                 <div className="about-card">
@@ -48,7 +48,7 @@ class AboutCards extends React.Component {
                     <hr className="short-line cards-line" />
                     <p className="card-paragraph">
                         Are you still hesitant on signing up? Try our hassle-free working demo today by clicking
-                        <a className="demo-link" onClick={() => this.handleDemo()}>&nbsp;Demo</a>
+                        <button className="demo-link" onClick={() => this.handleDemo()}>&nbsp;Demo</button>
                     </p>
                 </div>
             </div>

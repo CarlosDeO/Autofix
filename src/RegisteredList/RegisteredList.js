@@ -29,7 +29,7 @@ class RegisteredList extends React.Component {
 
         const cars = this.context.cars.map(car => {
             return (
-                <Car handleDelete={(id) => this.handleDelete(id)} car={car} />
+                <Car key={car._id} handleDelete={(id) => this.handleDelete(id)} car={car} />
             )
         });
 

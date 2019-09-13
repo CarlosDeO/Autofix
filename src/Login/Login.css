@@ -92,3 +92,15 @@
     cursor: pointer;
 }
 
+.register {
+    background: none;
+    border: none;
+    font-size: 15px;
+    color: #e6e676;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.register:hover {
+    text-decoration: underline;
+}

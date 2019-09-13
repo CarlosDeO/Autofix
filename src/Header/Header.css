@@ -30,7 +30,9 @@
 .nav-link {
     text-decoration: none;
     color: white;
-    
+    background: none;
+    border: none;
+    font-size: 18px;
 }
 
 .nav-list li .nav-link:hover,
@@ -38,3 +40,4 @@
     border-bottom: 2px solid #ccc;
     padding-bottom: 8px;
 }
+

@@ -36,17 +36,17 @@ class CarForm extends React.Component {
             <div className="car-form-container">
                 
                 <form className="car-form" onSubmit={e => this.onSubmit(e)}>
-                    <ul class="flex-outer">
+                    <ul className="flex-outer">
                     <li>
-                    <label for="year">Year</label>
+                    <label htmlFor="year">Year</label>
                     <input type="number" id="year" name="year" required/>
                     </li>
                     <li>
-                    <label for="make">Make</label>
+                    <label htmlFor="make">Make</label>
                     <input type="text" id="make" name="make" required/>
                     </li>
                     <li>
-                    <label for="model">Model</label>
+                    <label htmlFor="model">Model</label>
                     <input id="model" type="text" name="model" required/>
                     </li>
                     <button className="car-submit" type="submit">Submit</button>

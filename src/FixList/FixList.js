@@ -41,7 +41,7 @@ class FixList extends React.Component {
         const fixs = this.state.fix.map(item => {
 
             return (
-                <Fix item={item} handleDeleteFix={id => this.handleDeleteFix(id)} />
+                <Fix key={item._id} item={item} handleDeleteFix={id => this.handleDeleteFix(id)} />
             )
         });
 

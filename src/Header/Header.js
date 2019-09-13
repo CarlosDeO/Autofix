@@ -8,8 +8,6 @@ logout() {
         console.log("logout")
         localStorage.clear();
         this.props.history.push('/')
-        // window.location = '/'
-
 }
     render () {
         return (
@@ -21,7 +19,7 @@ logout() {
                         Profile
                         </Link>
                     </li>
-                    <li><Link className="nav-link" onClick={() => this.logout()}>Signout</Link></li>
+                    <li><button className="nav-link" href="#" onClick={() => this.logout()}>Signout</button></li>
                 </ul>
             </nav>
         )

@@ -16,12 +16,19 @@ class Login extends React.Component {
         this.lastNameInput = React.createRef();
 
     }
+    componentDidMount() {
+        if(localStorage.authToken) {
+            this.props.history.push('/profile')
+        }
+    } 
     onLogin(value) {
         this.context.setUserName(value);
 
     }
     toggleHidden() {
         this.setState({ login: !this.state.login })
+        this.usernameInput.current.value = "";
+        this.passwordInput.current.value = "";
     }
     registerNewUser(event) {
         event.preventDefault();
@@ -72,9 +79,9 @@ class Login extends React.Component {
             return (
                 <section className="signin-register">
 
-                    <form className="signin-form">
+                    <form className="signin-form" onSubmit={e => this.loginUser(e)}>
                         <h2 className="login-header">Log In</h2>
-                        <label for="username"></label>
+                        <label htmlFor="username"></label>
                         <input
                             className="form-input"
                             id="username"
@@ -82,21 +89,22 @@ class Login extends React.Component {
                             name="username"
                             placeholder="Username"
                             ref={this.usernameInput}
-                            onChange={e => this.onLogin(e.target.value)} />
+                            onChange={e => this.onLogin(e.target.value)} required/>
                         <br /><br />
-                        <label></label>
-                        <input for="password"
+                        <label htmlFor="password"></label>
+                        <input
                             className="form-input"
                             id="password"
                             type="password"
                             name="password"
                             placeholder="Password"
                             ref={this.passwordInput}
+                            required
                         />
                         <br /><br />
-                        <button className="login-button" type="submit" onClick={e => this.loginUser(e)}>Log In</button><br /><br />
+                        <button className="login-button" type="submit">Log In</button><br /><br />
 
-                        Don't have account?<a onClick={e => this.toggleHidden()} href="#" className="register" >&nbsp;Sign Up</a>
+                        Don't have account?<button onClick={e => this.toggleHidden()} href="#" className="register" >&nbsp;Sign Up</button>
 
                     </form>
                 </section>
@@ -105,19 +113,19 @@ class Login extends React.Component {
         else {
             return (
                 <section className="signin-register">
-                    <form className="register-form">
+                    <form className="register-form"  onSubmit={e => this.registerNewUser(e)}>
                         <h2 className="register-header">Sign Up</h2>
-                        <label for="userName"></label>
-                        <input className="form-input" id="userName" type="text" name="userName" placeholder="Username" ref={this.usernameInput} /><br /><br />
-                        <label for="firstName"></label>
-                        <input className="form-input" id="firstName" type="text" name="firstName" placeholder="First name" ref={this.nameInput} /><br /><br />
-                        <label for="lastName"></label>
-                        <input className="form-input" id="lastName" type="text" name="lastName" placeholder="Last name" ref={this.lastNameInput} /><br /><br />
-                        <label for="password"></label>
-                        <input className="form-input" id="password" type="password" name="pass" placeholder="Password" ref={this.passwordInput} /><br /><br />
-                        <label for="password"></label>
-                        <input className="form-input" type="password" name="pass" placeholder="Confirm Password" /><br /><br />
-                        <button className="register-button" type='submit' onClick={e => this.registerNewUser(e)}>Sign Up</button>
+                        <label htmlFor="userName"></label>
+                        <input className="form-input" id="userName" type="text" name="userName" placeholder="Username" ref={this.usernameInput} required/><br /><br />
+                        <label htmlFor="firstName"></label>
+                        <input className="form-input" id="firstName" type="text" name="firstName" placeholder="First name" ref={this.nameInput} required/><br /><br />
+                        <label htmlFor="lastName"></label>
+                        <input className="form-input" id="lastName" type="text" name="lastName" placeholder="Last name" ref={this.lastNameInput} required/><br /><br />
+                        <label htmlFor="password"></label>
+                        <input className="form-input" id="password" type="password" name="pass" placeholder="Password" ref={this.passwordInput} required/><br /><br />
+                        <label htmlFor="password"></label>
+                        <input className="form-input" type="password" name="pass" placeholder="Confirm Password" required/><br /><br />
+                        <button className="register-button" type='submit'>Sign Up</button>
                         <button className="cancel" onClick={e => this.toggleHidden()}>Cancel</button>
                     </form>
                 </section>

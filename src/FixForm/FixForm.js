@@ -32,21 +32,21 @@ class FixForm extends React.Component {
                 <Header {...this.props} />
                 <div className="fix-form-container">
                     <form className="fix-form" onSubmit={e => this.handleSubmit(e)}>
-                        <ul class="flex-outer">
+                        <ul className="flex-outer">
                             <li>
-                            <label for="title">Fix Title</label>
-                            <input id="title" type="text" name="title"></input>
+                            <label htmlFor="title">Fix Title</label>
+                            <input id="title" type="text" name="title" required></input>
                             </li>
                             <li>
-                            <label for="date">Date</label>
-                            <input id="date" type="date" name="date"></input>
+                            <label htmlFor="date">Date</label>
+                            <input id="date" type="date" name="date" required></input>
                             </li>
                             <li>
-                            <label for="cost">Cost</label>
-                            <input id="cost" type="text" name="cost"></input>
+                            <label htmlFor="cost">Cost</label>
+                            <input id="cost" type="text" name="cost" required></input>
                             </li>
-                            <label className="text-label" for="discription">Discription</label>
-                            <textarea id="discription" name="description" ></textarea>
+                            <label className="text-label" htmlFor="description" required>Description</label>
+                            <textarea id="description" name="description" ></textarea>
                             <button className="fix-submit" type="submit">Submit</button>
                         </ul>
                     </form>
