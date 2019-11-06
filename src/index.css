@@ -3,7 +3,7 @@
 }
 
 body {
-  background:  url('https://libreshot.com/wp-content/uploads/2016/04/car-repair-shop-2-861x574.jpg'),
+  background:  url('../public/Images/RepairShop.jpg'),
   no-repeat center fixed;
   /* background-repeat: no-repeat; */
   background-size: cover;
