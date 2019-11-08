@@ -7,7 +7,7 @@
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
     ),
-    url('https://libreshot.com/wp-content/uploads/2016/04/car-repair-shop-2-861x574.jpg'),
+    url('./RepairShop.jpg'),
     no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;

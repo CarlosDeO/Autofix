@@ -3,9 +3,8 @@
 }
 
 body {
-  background:  url('../public/Images/RepairShop.jpg'),
+  background: url('./LandingPage/RepairShop.jpg'),
   no-repeat center fixed;
-  /* background-repeat: no-repeat; */
   background-size: cover;
   height: 100%;
   margin: 0;
