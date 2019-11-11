@@ -48,6 +48,7 @@ class AboutCards extends React.Component {
                     <hr className="short-line cards-line" />
                     <p className="card-paragraph">
                         Are you still hesitant on signing up? Try our hassle-free working demo today by clicking
+                        <br/>
                         <button className="demo-link" onClick={() => this.handleDemo()}>&nbsp;Demo</button>
                     </p>
                 </div>

@@ -78,6 +78,7 @@ h2 {
   padding: 10px 0;
   border-radius: 15px;
   cursor: pointer;
+  text-decoration-line: none;
 }
 
 .signin-button:hover {
@@ -86,16 +87,21 @@ h2 {
 }
 
 .demo-link {
-  background: none;
+  width: 150px;
+  background-color: #1F9A8C;
+  padding: 10px 0;
+  border-radius: 15px;
   border: none;
-  font-size: 25px;
+  font-size: 20px;
   cursor: pointer;
-  color: #94161c;
-  font-weight: bolder;
+  color: white;
+  margin-top: 20px;
+  /* transition: background-color 0.3s; */
 }
 
 .demo-link:hover {
-  font-size: 150%;
+  background-color: white;
+  color: black;
 }
 
 
